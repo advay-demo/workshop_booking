@@ -409,8 +409,15 @@ Login
                             Sign in to continue
                         </p>
 
-                        <form method="post">
+                        <form method="post" action="{% url 'login' %}">
                             {% csrf_token %}
+                            {{ form.errors }}
+
+                            {% if form.errors %}
+                            <div style="color:#ef4444; margin-bottom:12px; font-weight:500;">
+                                Invalid username or password
+                            </div>
+                            {% endif %}
 
                             <div class="form-group mb-3">
                                 <label>Username</label>

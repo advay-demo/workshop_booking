@@ -37,6 +37,8 @@ __credits__ = ["Mahesh Gudi", "Aditya P.", "Ankit Javalkar",
 
 
 # Helper functions
+def home(request):
+    return render(request, 'workshop_app/home.html')
 
 def is_email_checked(user):
     return user.profile.is_email_verified

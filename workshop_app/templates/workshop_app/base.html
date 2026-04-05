@@ -44,17 +44,29 @@
         <a class="navbar-brand" href="{{request.scheme}}://{{request.get_host}}">FOSSEE Workshops</a>
         {% endif %}
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto align-items-center">
+
                 <li class="nav-item">
-                    <a class="nav-link active" href="/">
+                    <a class="nav-link" href="{% url 'workshop_app:index' %}">
                         Home
                     </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'statistics_app:public' %}">
+                    <a class="nav-link" href="{% url 'statistics_app:public' %}">
                         Workshop Statistics
                     </a>
                 </li>
+
+                {% if not user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="btn btn-primary ml-3" href="{% url 'workshop_app:login' %}"
+                        style="border-radius: 8px; padding: 6px 16px;">
+                        Login / Sign Up
+                    </a>
+                </li>
+                {% endif %}
+
             </ul>
             {% if user.is_authenticated %}
             <ul class="navbar-nav mr-auto">
@@ -123,12 +135,65 @@
     </script>
 
 </body>
-<footer class="footer">
+<footer>
+
     {% block footer %}
-    <div class="container">
-        Developed by FOSSEE group, IIT Bombay
+
+    <!-- CTA SECTION -->
+    <div style="background:#0b3c6d; padding:40px 20px; text-align:center; color:white;">
+        <h2>Stay updated on new workshops</h2>
+        <p>Get notified when new workshops are announced</p>
+        <a href="#" style="
+            background:#ff6b00;
+            color:white;
+            padding:10px 20px;
+            border-radius:6px;
+            text-decoration:none;
+            display:inline-block;
+            margin-top:10px;
+        ">
+            View All Workshops
+        </a>
     </div>
+
+    <!-- MAIN FOOTER -->
+    <div style="background:#082c54; color:white; padding:40px 20px;">
+        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; max-width:1100px; margin:auto;">
+
+            <div style="flex:1; min-width:250px; margin-bottom:20px;">
+                <h4>About</h4>
+                <p>
+                    Book hands-on FOSSEE workshops, collaborate with instructors,
+                    and build practical open-source skills guided by IIT Bombay experts.
+                </p>
+            </div>
+
+            <div style="flex:1; min-width:200px;">
+                <h4>Quick Links</h4>
+                <p><a href="{% url 'workshop_app:index' %}" style="color:white;">Home</a></p>
+                <p><a href="#" style="color:white;">Workshops</a></p>
+                <p><a href="/login/" style="color:white;">Login</a></p>
+                <p><a href="/register/" style="color:white;">Register</a></p>
+            </div>
+
+            <div style="flex:1; min-width:200px;">
+                <h4>Contact</h4>
+                <p>Email: contact@fossee.in</p>
+                <p>Website: fossee.in</p>
+                <p>Location: IIT Bombay, Mumbai</p>
+            </div>
+
+        </div>
+
+        <hr style="margin:20px 0; border-color:#1e4a7a;">
+
+        <div style="text-align:center;">
+            <p>An initiative of IIT Bombay under the National Mission on Education</p>
+        </div>
+    </div>
+
     {% endblock %}
+
 </footer>
 
 </html>

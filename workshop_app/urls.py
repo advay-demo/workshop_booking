@@ -23,11 +23,14 @@ app_name = "workshop_app"
 
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^home/$', views.home, name='home'),
+    url(r'^$', views.home, name='index'),
     url(r'^register/$', views.user_register, name="register"),
     url(r'^activate_user/(?P<key>.+)$', views.activate_user),
     url(r'^activate_user/$', views.activate_user),
-    url(r'^login/$', views.user_login, name="login"),
+    url(r'^login/$', auth_views.LoginView.as_view(
+        template_name='workshop_app/login.html'
+    ), name='login'),
     url(r'^logout/$', views.user_logout, name="logout"),
     url(r'^status$', views.workshop_status_coordinator,
         name='workshop_status_coordinator'),

@@ -1,0 +1,124 @@
+{% extends "workshop_app/base.html" %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+<style>
+    .home-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+        min-height: 80vh;
+    }
+
+    .side-img {
+        width: 22%;
+    }
+
+    .side-img img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .home-content {
+        width: 50%;
+        text-align: center;
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .home-content h1 {
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .home-content p {
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .btn-main {
+        background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 10px;
+        text-decoration: none;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .btn-main:hover {
+        color: white;
+        opacity: 0.9;
+    }
+
+    @media(max-width: 900px) {
+        .side-img {
+            display: none;
+        }
+
+        .home-content {
+            width: 100%;
+        }
+    }
+</style>
+
+<div class="home-wrapper">
+
+    <!-- LEFT IMAGE -->
+    <div class="side-img">
+        <img src="{% static 'workshop_app/img/left.png' %}">
+    </div>
+
+    <!-- CENTER CONTENT -->
+    <div class="home-content">
+        <h1>Welcome to FOSSEE Workshops</h1>
+
+        <p style="font-size:16px; color:#555; margin-top:10px;">
+            Discover a learning experience designed to go beyond traditional classrooms.
+            FOSSEE Workshops bring together students, educators, and industry experts to
+            collaborate, build, and innovate using powerful open-source tools.
+        </p>
+
+        <p style="font-size:15px; color:#666; margin-top:10px;">
+            Whether you are just starting your journey or looking to deepen your technical
+            expertise, our hands-on workshops provide real-world exposure through guided
+            sessions, practical problem-solving, and interactive learning environments.
+            Each workshop is carefully structured to help you gain not just knowledge,
+            but confidence in applying it.
+        </p>
+
+        <p style="font-size:15px; color:#666; margin-top:10px;">
+            From programming and simulation to scientific computing and engineering tools,
+            you will have the opportunity to explore a wide range of domains while learning
+            directly from experienced instructors. Join a growing community of learners
+            who are building skills that matter.
+        </p>
+
+        <p style="font-size:15px; color:#666; margin-top:10px;">
+            Start your journey today — explore workshops, connect with mentors, and take
+            your first step towards mastering open-source technologies.
+        </p>
+
+        <a href="{% url 'workshop_app:login' %}" class="btn-main">
+            Get Started
+        </a>
+
+        <a href="{% url 'statistics_app:public' %}" class="btn-main">
+            View Workshops
+        </a>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="side-img">
+        <img src="{% static 'workshop_app/img/right.png' %}">
+    </div>
+
+</div>
+
+{% endblock %}
