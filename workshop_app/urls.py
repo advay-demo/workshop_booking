@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from workshop_app import views
+from django.contrib.auth import views as auth_views
+
+
 
 app_name = "workshop_app"
+
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
