@@ -90,53 +90,45 @@ Transforming a basic, table-based UI into a modern design while keeping Django t
 
 ## 📸 Visual Showcase
 
+---
+
 ### 🔐 Login Page
 
-**Before:**
-![Login Before](./screenshots/login-before.png)
-
-**After:**
-![Login After](./screenshots/login-after.png)
+| Before | After |
+|--------|-------|
+|<img src="docs/images/login_before.png" width="400"/> | <img src="docs/images/login_after.png" width="400"/> |
 
 ---
 
 ### 📝 Registration Page
 
-**Before:**
-![Register Before](./screenshots/register-before.png)
-
-**After:**
-![Register After](./screenshots/register-after.png)
+| Before | After |
+|--------|-------|
+| ![Register Before](path/to/register_before.png) | ![Register After](path/to/register_after.png) |
 
 ---
 
 ### 📊 Workshop Statistics Page
 
-**Before:**
-![Stats Before](./screenshots/stats-before.png)
-
-**After:**
-![Stats After](./screenshots/stats-after.png)
+| Before | After |
+|--------|-------|
+| ![Stats Before](path/to/stats_before.png) | ![Stats After](path/to/stats_after.png) |
 
 ---
 
 ### 🔑 Forgot Password Page
 
-**Before:**
-![Forgot Before](./screenshots/forgot-before.png)
-
-**After:**
-![Forgot After](./screenshots/forgot-after.png)
+| Before | After |
+|--------|-------|
+| ![Forgot Before](path/to/forgot_before.png) | ![Forgot After](path/to/forgot_after.png) |
 
 ---
 
 ### 📧 Email Confirmation Page
 
-**Before:**
-![Email Before](./screenshots/email-before.png)
-
-**After:**
-![Email After](./screenshots/email-after.png)
+| Before | After |
+|--------|-------|
+| ![Email Before](path/to/email_before.png) | ![Email After](path/to/email_after.png) |
 
 ---
 
