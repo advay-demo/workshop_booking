@@ -92,6 +92,10 @@ Transforming a basic, table-based UI into a modern design while keeping Django t
 
 ---
 
+### 🔐 Home Page
+
+| <img src="docs/images/login_after.png" width="400"/> |
+
 ### 🔐 Login Page
 
 | Before | After |
@@ -104,7 +108,7 @@ Transforming a basic, table-based UI into a modern design while keeping Django t
 
 | Before | After |
 |--------|-------|
-| ![Register Before](path/to/register_before.png) | ![Register After](path/to/register_after.png) |
+|<img src="docs/images/register_before.png" width="400"/> | <img src="docs/images/login_after.png" width="400"/> |
 
 ---
 
@@ -112,7 +116,7 @@ Transforming a basic, table-based UI into a modern design while keeping Django t
 
 | Before | After |
 |--------|-------|
-| ![Stats Before](path/to/stats_before.png) | ![Stats After](path/to/stats_after.png) |
+|<img src="docs/images/stats_before.png" width="400"/> | <img src="docs/images/login_after.png" width="400"/> |
 
 ---
 
@@ -120,15 +124,13 @@ Transforming a basic, table-based UI into a modern design while keeping Django t
 
 | Before | After |
 |--------|-------|
-| ![Forgot Before](path/to/forgot_before.png) | ![Forgot After](path/to/forgot_after.png) |
+|<img src="docs/images/forgot_before.png" width="400"/> | <img src="docs/images/login_after.png" width="400"/> |
 
 ---
 
 ### 📧 Email Confirmation Page
 
-| Before | After |
-|--------|-------|
-| ![Email Before](path/to/email_before.png) | ![Email After](path/to/email_after.png) |
+| <img src="docs/images/login_after.png" width="400"/> |
 
 ---
 
